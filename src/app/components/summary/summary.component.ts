@@ -8,10 +8,10 @@ import {Component, Input, OnInit} from '@angular/core';
 export class SummaryComponent implements OnInit {
   constructor() { }
 
+  @Input () stock: any;
+
   ngOnInit(): void {
   }
-
-  @Input () stock: any;
 
   isNegative() {
     return (this.stock && this.stock.change < 0);
